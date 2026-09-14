@@ -8,7 +8,7 @@ const CREDENTIALS_KEY = 'mk_admin_credentials_v1';
 // Default credentials as specified in prompt: password "1234arbaj" or "mkadmin123"
 const DEFAULT_CREDENTIALS = {
   username: 'admin',
-  password: '1234arbaj',
+  password: 'arbaj97855',
   alternatePassword: 'mkadmin123'
 };
 

@@ -7,8 +7,8 @@ export default function AdminLoginPage() {
   const { login, isAuthenticated } = useAdminAuth();
   const navigate = useNavigate();
 
-  const [username, setUsername] = useState('admin');
-  const [password, setPassword] = useState('1234arbaj');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -23,18 +23,18 @@ export default function AdminLoginPage() {
     if (success === true || success?.success) {
       navigate('/admin/dashboard', { replace: true });
     } else {
-      setError('Invalid username or password. (Hint: admin / 1234arbaj)');
+      setError('Invalid username or password. ');
     }
   };
 
-  const handleQuickLogin = () => {
-    setUsername('admin');
-    setPassword('1234arbaj');
-    const success = login('admin', '1234arbaj');
-    if (success === true || success?.success) {
-      navigate('/admin/dashboard', { replace: true });
-    }
-  };
+  // const handleQuickLogin = () => {
+  //   setUsername('admin');
+  //   setPassword('1234arbaj');
+  //   const success = login('admin', '1234arbaj');
+  //   if (success === true || success?.success) {
+  //     navigate('/admin/dashboard', { replace: true });
+  //   }
+  // };
 
   return (
     <div className="admin-login-wrap">
@@ -87,34 +87,10 @@ export default function AdminLoginPage() {
             <FaLock style={{ fontSize: '0.9rem' }} /> Log In to Dashboard
           </button>
 
-          <button
-            type="button"
-            onClick={handleQuickLogin}
-            style={{
-              width: '100%',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '8px',
-              marginTop: '12px',
-              padding: '12px',
-              borderRadius: 'var(--radius-full)',
-              background: 'rgba(249, 115, 22, 0.15)',
-              border: '1px solid rgba(249, 115, 22, 0.4)',
-              color: 'var(--primary-light)',
-              fontWeight: 700,
-              fontSize: '0.9rem',
-              cursor: 'pointer'
-            }}
-          >
-            <FaKey /> 1-Click Quick Demo Login
-          </button>
+          
         </form>
 
-        <div className="admin-hint-pill">
-          <strong>Credentials:</strong> <br />
-          Username: <code>admin</code> &nbsp;|&nbsp; Password: <code>1234arbaj</code> (or <code>mkadmin123</code>)
-        </div>
+     
       </div>
     </div>
   );
