@@ -1,0 +1,49 @@
+{
+  "entities": {
+    "reviews": {
+      "title": "Customer Reviews",
+      "description": "Reviews and ratings submitted by fast-food customers",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "avatar": { "type": "string" },
+        "rating": { "type": "number" },
+        "comment": { "type": "string" },
+        "dishName": { "type": "string" },
+        "date": { "type": "string" },
+        "source": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["name", "comment", "rating"]
+    },
+    "orders": {
+      "title": "Customer Orders",
+      "description": "Food orders placed via counter or WhatsApp checkout",
+      "type": "object",
+      "properties": {
+        "customerName": { "type": "string" },
+        "phone": { "type": "string" },
+        "orderType": { "type": "string" },
+        "items": { "type": "array" },
+        "total": { "type": "number" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["customerName", "phone", "items", "total"]
+    }
+  },
+  "securityRules": {
+    "reviews": {
+      "read": "true",
+      "create": "request.resource.data.comment is string",
+      "update": "true",
+      "delete": "true"
+    },
+    "orders": {
+      "read": "true",
+      "create": "true",
+      "update": "true",
+      "delete": "true"
+    }
+  }
+}

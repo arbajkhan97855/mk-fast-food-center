@@ -1,0 +1,139 @@
+{
+  "reviews": [
+    {
+      "id": "rev-1789366525734-5go3",
+      "name": "Pathan Arbaj",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&auto=format&fit=crop&q=80",
+      "rating": 5,
+      "date": "Just now",
+      "source": "Customer Review • Chomu",
+      "comment": "Sabse badhiya momos and fast takeaway service in Chomu!",
+      "dishName": "Kurkure Chicken Momos",
+      "createdAt": 1789366525734
+    },
+    {
+      "id": "rev-1",
+      "name": "Vikram Sharma",
+      "rating": 5,
+      "date": "Yesterday",
+      "source": "Local Guide • Chomu",
+      "dishName": "Steamed Chicken Momos",
+      "comment": "Fresh food and very tasty momos! The red garlic chutney is genuinely spicy and authentic. Best momos near Nagar Palika.",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&auto=format&fit=crop&q=80",
+      "createdAt": 1789280122584
+    },
+    {
+      "id": "rev-2",
+      "name": "Rahul Verma",
+      "rating": 5,
+      "date": "3 days ago",
+      "source": "Regular Customer",
+      "dishName": "Double Egg Chicken Roll",
+      "comment": "Chicken roll was amazing! Filled with juicy chicken chunks and real egg layer. Arbaj and Mumtaj bhai make it with high energy.",
+      "avatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=120&auto=format&fit=crop&q=80",
+      "createdAt": 1789107322584
+    },
+    {
+      "id": "rev-3",
+      "name": "Pooja Choudhary",
+      "rating": 5,
+      "date": "1 week ago",
+      "source": "College Student",
+      "dishName": "Kurkure Paneer Momos",
+      "comment": "Good taste and quick service. Even though the shop is compact, the takeaway counter is fast and WhatsApp ordering is super smooth.",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&auto=format&fit=crop&q=80",
+      "createdAt": 1788761722584
+    },
+    {
+      "id": "rev-4",
+      "name": "Mohammad Imran",
+      "rating": 5,
+      "date": "2 weeks ago",
+      "source": "Local Resident",
+      "dishName": "Crispy Aloo Tikki Burger",
+      "comment": "Best place for evening snacks in Chomu. Veg chowmein and chicken burger are totally mouthwatering. Great prices too.",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80",
+      "createdAt": 1788156922584
+    },
+    {
+      "id": "rev-5",
+      "name": "Sunil Saini",
+      "rating": 5,
+      "date": "3 weeks ago",
+      "source": "Office Worker nearby",
+      "dishName": "Veg Hakka Chowmein",
+      "comment": "We regularly order evening takeaway for our staff near Nagar Palika. Hot food delivered promptly to our counter via WhatsApp!",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&auto=format&fit=crop&q=80",
+      "createdAt": 1787552122584
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-9021",
+      "customerName": "Rahul Sharma",
+      "phone": "9829012345",
+      "mobile": "9829012345",
+      "orderType": "Takeaway",
+      "items": [
+        {
+          "name": "Chicken Steam Momos",
+          "quantity": 2,
+          "price": 80
+        },
+        {
+          "name": "Chicken Roll",
+          "quantity": 1,
+          "price": 110
+        }
+      ],
+      "total": 270,
+      "amount": 270,
+      "date": "Today, 06:45 PM",
+      "createdAt": 1789359322584,
+      "instructions": "Keep extra spicy red chutney please",
+      "status": "Confirmed"
+    },
+    {
+      "id": "ORD-9018",
+      "customerName": "Priya Soni",
+      "phone": "9414055521",
+      "mobile": "9414055521",
+      "orderType": "Dine-in",
+      "items": [
+        {
+          "name": "Veg Chowmein",
+          "quantity": 1,
+          "price": 70
+        },
+        {
+          "name": "French Fries",
+          "quantity": 1,
+          "price": 60
+        },
+        {
+          "name": "Cold Drink (Chilled)",
+          "quantity": 2,
+          "price": 30
+        }
+      ],
+      "total": 190,
+      "amount": 190,
+      "date": "Today, 03:20 PM",
+      "createdAt": 1789348522584,
+      "instructions": "Table outside on chabutara",
+      "status": "Completed"
+    }
+  ],
+  "enquiries": [
+    {
+      "id": "ENQ-101",
+      "name": "Amit Pareek",
+      "phone": "9829876543",
+      "topic": "Bulk Catering",
+      "message": "Do you supply 50 plates momos and rolls for evening birthday gathering?",
+      "date": "Yesterday",
+      "createdAt": 1789337722584,
+      "status": "Contacted"
+    }
+  ]
+}

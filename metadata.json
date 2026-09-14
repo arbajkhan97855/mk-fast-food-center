@@ -1,0 +1,6 @@
+{
+  "name": "MK FAST-FOOD CENTER",
+  "description": "MK Fast-Food Center near Nagar Palika and New Gareeb Nawaj Hotel, Chomu. Fresh momos, burgers, chowmein, rolls, chicken specials and value combos. Order on WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
