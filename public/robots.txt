@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://mkfastfoodcenter.netlify.app/sitemap.xml
