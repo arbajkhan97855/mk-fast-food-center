@@ -69,6 +69,44 @@
   ],
   "orders": [
     {
+      "id": "MK-074568",
+      "customerName": "Arbaj Pathan",
+      "phone": "9785589164",
+      "mobile": "9785589164",
+      "orderType": "takeaway",
+      "items": [
+        {
+          "id": "p13",
+          "name": "Paneer Roll",
+          "category": "rolls",
+          "price": 90,
+          "oldPrice": 105,
+          "isVeg": true,
+          "rating": 4.8,
+          "reviewsCount": 140,
+          "shortDesc": "Soft tawa paneer cubes sauteed in tikka masala inside a crisp paratha.",
+          "description": "Soft paneer cubes tossed in rich tandoori spices and capsicum, rolled inside freshly griddled paratha with onion rings and tangy sauces.",
+          "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=700&auto=format&fit=crop&q=80",
+          "isPopular": true,
+          "isBestseller": true,
+          "available": true,
+          "prepTime": "8 mins",
+          "cartItemId": "p13-",
+          "basePrice": 90,
+          "quantity": 1,
+          "selectedAddons": [],
+          "addons": []
+        }
+      ],
+      "total": 100,
+      "amount": 100,
+      "date": "10 Oct, 03:41 pm",
+      "createdAt": 1791627074569,
+      "instructions": "trd",
+      "status": "New",
+      "address": "Near Nagar Palika, Chomu"
+    },
+    {
       "id": "ORD-9021",
       "customerName": "Rahul Sharma",
       "phone": "9829012345",
