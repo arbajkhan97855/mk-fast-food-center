@@ -66,31 +66,43 @@ export default function MenuPage() {
   return (
     <div className="menu-page-header">
       {/* Header text */}
+
       <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-        <span className="section-subtitle-tag">LIVE COUNTER MENU</span>
+        <span className="section-subtitle-tag">
+          MK FAST-FOOD CENTER · CHOMU
+        </span>
+
         <h1 className="section-title">
-          Our Full <span>Fast-Food Menu</span>
+          Fast Food Menu in Chomu
+          <span> Momos, Burgers, Chowmein & Rolls</span>
         </h1>
-        <p className="section-lead" style={{ maxWidth: '600px', margin: '0 auto' }}>
-          Steamed & fried momos, sizzling chowmein, crispy burgers, hearty rolls, and combos prepared fresh on order.
+
+        <p
+          className="section-lead"
+          style={{ maxWidth: '650px', margin: '0 auto' }}
+        >
+          Explore the menu at MK Fast-Food Center in Chomu, Jaipur.
+          Find momos, burgers, chowmein, rolls and food combos.
+          Check available items and prices before ordering.
         </p>
       </div>
+
 
       {/* Filter and Search Bar */}
       <div className="menu-filter-bar">
         <div className="menu-search-row">
           <div className="search-input-wrap">
             <FaSearch />
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder="Search momos, burger, roll, chowmein..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="search-input-field"
             />
             {searchQuery && (
-              <button 
-                type="button" 
+              <button
+                type="button"
                 className="clear-search-btn"
                 onClick={() => setSearchQuery('')}
                 aria-label="Clear search query"
@@ -102,21 +114,21 @@ export default function MenuPage() {
 
           {/* Veg / Non-Veg Quick Toggles */}
           <div className="diet-filter-toggles">
-            <button 
+            <button
               type="button"
               className={`diet-toggle-btn ${dietFilter === 'all' ? 'active' : ''}`}
               onClick={() => setDietFilter('all')}
             >
               All Items
             </button>
-            <button 
+            <button
               type="button"
               className={`diet-toggle-btn veg ${dietFilter === 'veg' ? 'active' : ''}`}
               onClick={() => setDietFilter('veg')}
             >
               <FaLeaf /> Pure Veg
             </button>
-            <button 
+            <button
               type="button"
               className={`diet-toggle-btn non-veg ${dietFilter === 'non-veg' ? 'active' : ''}`}
               onClick={() => setDietFilter('non-veg')}
@@ -127,8 +139,8 @@ export default function MenuPage() {
 
           {/* Sort Dropdown */}
           <div className="sort-select-wrap">
-            <select 
-              value={sortBy} 
+            <select
+              value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
               className="sort-select"
             >
@@ -142,7 +154,7 @@ export default function MenuPage() {
 
         {/* Category Pills Row */}
         <div className="category-pills-row">
-          <button 
+          <button
             type="button"
             className={`category-pill-btn ${selectedCategory === 'all' ? 'active' : ''}`}
             onClick={() => handleCategoryChange('all')}
@@ -150,10 +162,12 @@ export default function MenuPage() {
             All Categories ({products.length})
           </button>
           {categories.map(cat => (
-            <button 
+            <button
               key={cat.id}
               type="button"
-              className={`category-pill-btn ${selectedCategory === cat.slug ? 'active' : ''}`}
+              className={`category-pill-btn ${selectedCategory === cat.slug ? 'active' : ''
+                }`}
+              aria-pressed={selectedCategory === cat.slug}
               onClick={() => handleCategoryChange(cat.slug)}
             >
               {cat.name}
@@ -165,12 +179,12 @@ export default function MenuPage() {
       {/* Results Meta Info */}
       <div className="results-meta-bar">
         <span>
-          Showing <strong>{filteredProducts.length}</strong> items 
+          Showing <strong>{filteredProducts.length}</strong> items
           {selectedCategory !== 'all' && ` in ${categories.find(c => c.slug === selectedCategory)?.name || selectedCategory}`}
         </span>
         {(searchQuery || selectedCategory !== 'all' || dietFilter !== 'all') && (
-          <button 
-            type="button" 
+          <button
+            type="button"
             style={{ color: 'var(--primary)', cursor: 'pointer', fontSize: '0.85rem', fontWeight: '700' }}
             onClick={() => {
               setSelectedCategory('all');
@@ -189,8 +203,8 @@ export default function MenuPage() {
       {filteredProducts.length > 0 ? (
         <div className="products-grid-4">
           {filteredProducts.map(product => (
-            <ProductCard 
-              key={product.id} 
+            <ProductCard
+              key={product.id}
               product={product}
               onQuickView={(p) => setActiveModalProduct(p)}
             />
@@ -203,8 +217,8 @@ export default function MenuPage() {
           </div>
           <h3>No Dishes Found</h3>
           <p>We couldn't find any items matching your selected search or filters. Try adjusting your query or category.</p>
-          <button 
-            type="button" 
+          <button
+            type="button"
             className="btn-reset-filters"
             onClick={() => {
               setSelectedCategory('all');
@@ -221,9 +235,9 @@ export default function MenuPage() {
 
       {/* Modal Quick View */}
       {activeModalProduct && (
-        <ProductModal 
-          product={activeModalProduct} 
-          onClose={() => setActiveModalProduct(null)} 
+        <ProductModal
+          product={activeModalProduct}
+          onClose={() => setActiveModalProduct(null)}
         />
       )}
     </div>

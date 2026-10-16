@@ -6,29 +6,29 @@ import ProductModal from '../components/ProductModal';
 import ShopExperienceCard from '../components/ShopExperienceCard';
 import { createWhatsAppGeneralEnquiry } from '../utils/whatsapp';
 import { FAQ_LIST } from '../data/initialData';
-import { 
-  FaWhatsapp, 
-  FaUtensils, 
-  FaFire, 
-  FaMotorcycle, 
-  FaStar, 
-  FaMapMarkerAlt as FaLocationDot, 
-  FaClock, 
-  FaTag, 
-  FaChevronDown, 
-  FaChevronUp, 
-  FaArrowRight, 
-  FaShieldAlt as FaShieldHalved 
+import {
+  FaWhatsapp,
+  FaUtensils,
+  FaFire,
+  FaMotorcycle,
+  FaStar,
+  FaMapMarkerAlt as FaLocationDot,
+  FaClock,
+  FaTag,
+  FaChevronDown,
+  FaChevronUp,
+  FaArrowRight,
+  FaShieldAlt as FaShieldHalved
 } from 'react-icons/fa';
 
 export default function HomePage() {
-  const { 
-    products, 
-    categories, 
-    combos, 
-    offers, 
-    reviews, 
-    settings, 
+  const {
+    products,
+    categories,
+    combos,
+    offers,
+    reviews,
+    settings,
     addToCart,
     openReviewModal,
     currentUser
@@ -39,7 +39,7 @@ export default function HomePage() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   // Best seller product ids from requirements: Chicken Momos, Veg Momos, Chicken Roll, Chicken Burger, Veg Chowmein, Chicken Chowmein, Paneer Roll, French Fries
-  const bestSellerProducts = products.filter(p => 
+  const bestSellerProducts = products.filter(p =>
     ['p3', 'p1', 'p14', 'p11', 'p5', 'p6', 'p13', 'p15'].includes(p.id)
   );
 
@@ -64,8 +64,11 @@ export default function HomePage() {
             </div>
 
             <h1 className="hero-headline">
-              Your Cravings. <br />
-              <span className="highlight-word">Our Kitchen.</span>
+              MK Fast-Food Center in Chomu
+              <br />
+              <span className="highlight-word">
+                Momos, Burgers, Chowmein & Rolls
+              </span>
             </h1>
 
             <p className="hero-subheading">
@@ -73,10 +76,10 @@ export default function HomePage() {
             </p>
 
             <div className="hero-cta-group">
-              <a 
-                href={whatsappUrl} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-hero-order"
               >
                 <FaWhatsapp style={{ fontSize: '1.25rem' }} /> ORDER ON WHATSAPP
@@ -102,23 +105,23 @@ export default function HomePage() {
           {/* HERO VISUAL WITH ANIMATED FOOD CARDS */}
           <div className="hero-visual-wrap">
             <div className="hero-center-circle" />
-            <img 
-              src="https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=800&auto=format&fit=crop&q=80" 
-              alt="Steaming Hot Dumplings and Fast Food" 
+            <img
+              src="https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=800&auto=format&fit=crop&q=80"
+              alt="Steamed momos served at MK Fast-Food Center in Chomu"
               className="hero-main-dish-img"
             />
 
             {/* Float Card 1: Momos */}
-            <div 
+            <div
               className="floating-food-card float-card-1"
               onClick={() => {
                 const item = products.find(p => p.category === 'momos');
                 if (item) setActiveModalProduct(item);
               }}
             >
-              <img 
-                src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=120&auto=format&fit=crop&q=80" 
-                alt="Chicken Momos" 
+              <img
+                src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=120&auto=format&fit=crop&q=80"
+                alt="Chicken Momos"
               />
               <div className="floating-card-info">
                 <h5>Chicken Momos</h5>
@@ -127,16 +130,16 @@ export default function HomePage() {
             </div>
 
             {/* Float Card 2: Burger */}
-            <div 
+            <div
               className="floating-food-card float-card-2"
               onClick={() => {
                 const item = products.find(p => p.id === 'p11');
                 if (item) setActiveModalProduct(item);
               }}
             >
-              <img 
-                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=120&auto=format&fit=crop&q=80" 
-                alt="Loaded Burger" 
+              <img
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=120&auto=format&fit=crop&q=80"
+                alt="Loaded Burger"
               />
               <div className="floating-card-info">
                 <h5>Loaded Burger</h5>
@@ -145,16 +148,16 @@ export default function HomePage() {
             </div>
 
             {/* Float Card 3: Chowmein */}
-            <div 
+            <div
               className="floating-food-card float-card-3"
               onClick={() => {
                 const item = products.find(p => p.id === 'p5');
                 if (item) setActiveModalProduct(item);
               }}
             >
-              <img 
-                src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=120&auto=format&fit=crop&q=80" 
-                alt="Veg Chowmein" 
+              <img
+                src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=120&auto=format&fit=crop&q=80"
+                alt="Veg Chowmein"
               />
               <div className="floating-card-info">
                 <h5>Hot Chowmein</h5>
@@ -163,16 +166,16 @@ export default function HomePage() {
             </div>
 
             {/* Float Card 4: Chicken Roll */}
-            <div 
+            <div
               className="floating-food-card float-card-4"
               onClick={() => {
                 const item = products.find(p => p.id === 'p14');
                 if (item) setActiveModalProduct(item);
               }}
             >
-              <img 
-                src="https://images.unsplash.com/photo-1544025162-d76694265947?w=120&auto=format&fit=crop&q=80" 
-                alt="Chicken Roll" 
+              <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?w=120&auto=format&fit=crop&q=80"
+                alt="Chicken Roll"
               />
               <div className="floating-card-info">
                 <h5>Chicken Roll</h5>
@@ -199,9 +202,9 @@ export default function HomePage() {
 
         <div className="categories-grid">
           {categories.map(cat => (
-            <Link 
-              key={cat.id} 
-              to={`/menu?cat=${cat.slug}`} 
+            <Link
+              key={cat.id}
+              to={`/menu?cat=${cat.slug}`}
               className="category-card"
             >
               <img src={cat.image} alt={cat.name} className="category-bg-img" loading="lazy" />
@@ -234,9 +237,9 @@ export default function HomePage() {
 
         <div className="products-grid-4">
           {bestSellerProducts.map(product => (
-            <ProductCard 
-              key={product.id} 
-              product={product} 
+            <ProductCard
+              key={product.id}
+              product={product}
               onQuickView={(p) => setActiveModalProduct(p)}
             />
           ))}
@@ -294,8 +297,8 @@ export default function HomePage() {
                       )}
                     </div>
 
-                    <button 
-                      type="button" 
+                    <button
+                      type="button"
                       className="btn-buy-now"
                       style={{ padding: '8px 14px', fontSize: '0.8rem' }}
                       onClick={() => {
@@ -339,7 +342,7 @@ export default function HomePage() {
               <span className="offer-tag">{offer.tag}</span>
               <h3 className="offer-title">{offer.title}</h3>
               <p className="offer-desc">{offer.description}</p>
-              
+
               <div className="offer-coupon-strip">
                 <div>
                   <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)', display: 'block' }}>CODE</span>
@@ -400,10 +403,10 @@ export default function HomePage() {
           {reviews.map(rev => (
             <div key={rev.id} className="review-card">
               <div className="review-header">
-                <img 
-                  src={rev.avatar} 
-                  alt={rev.name} 
-                  className="review-avatar" 
+                <img
+                  src={rev.avatar}
+                  alt={rev.name}
+                  className="review-avatar"
                   onError={(e) => {
                     e.target.src = 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&auto=format&fit=crop&q=80';
                   }}
@@ -463,9 +466,9 @@ export default function HomePage() {
             const isOpen = openFaqIndex === index;
             return (
               <div key={index} className={`faq-item ${isOpen ? 'open' : ''}`}>
-                <button 
-                  type="button" 
-                  className="faq-question-btn" 
+                <button
+                  type="button"
+                  className="faq-question-btn"
                   onClick={() => toggleFaq(index)}
                   aria-expanded={isOpen}
                 >
@@ -485,9 +488,9 @@ export default function HomePage() {
 
       {/* Modal Quick View */}
       {activeModalProduct && (
-        <ProductModal 
-          product={activeModalProduct} 
-          onClose={() => setActiveModalProduct(null)} 
+        <ProductModal
+          product={activeModalProduct}
+          onClose={() => setActiveModalProduct(null)}
         />
       )}
     </main>
