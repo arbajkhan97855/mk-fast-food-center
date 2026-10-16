@@ -72,19 +72,21 @@ export default function MenuPage() {
           MK FAST-FOOD CENTER · CHOMU
         </span>
 
-        <h1 className="section-title">
-          Fast Food Menu in Chomu
-          <span> Momos, Burgers, Chowmein & Rolls</span>
-        </h1>
+       
+<h1 className="section-title">
+  Fast Food Menu in Chomu
+  <span> Momos, Burgers, Chowmein & Rolls</span>
+</h1>
 
-        <p
-          className="section-lead"
-          style={{ maxWidth: '650px', margin: '0 auto' }}
-        >
-          Explore the menu at MK Fast-Food Center in Chomu, Jaipur.
-          Find momos, burgers, chowmein, rolls and food combos.
-          Check available items and prices before ordering.
-        </p>
+
+   <p
+  className="section-lead"
+  style={{ maxWidth: '650px', margin: '0 auto' }}
+>
+  Explore the menu at MK Fast-Food Center in Chomu, Jaipur.
+  Find momos, burgers, chowmein, rolls and food combos.
+  Check available items and prices before ordering.
+</p>
       </div>
 
 
