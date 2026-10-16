@@ -4,6 +4,7 @@ import { ShopProvider } from './context/ShopContext';
 import { AdminAuthProvider } from './context/AdminAuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import SEOHead from './components/SEOHead';
 import FloatingActions from './components/FloatingActions';
 import Toast from './components/Toast';
 import AuthModal from './components/AuthModal';
@@ -42,6 +43,7 @@ function AppLayout() {
   return (
     <div className="app-shell" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <ScrollToTop />
+      <SEOHead />
       {!isAdminRoute && <Navbar />}
 
       <div style={{ flex: 1, position: 'relative', zIndex: 1 }}>
